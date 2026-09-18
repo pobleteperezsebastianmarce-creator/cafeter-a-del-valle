@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe del Valle - Productos</title>
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo-area">
+                <img src="img/pexels-gareth-rees-2793957-4353927.jpg" alt="Logo Cafe del Valle" class="logo-img">
+                <a href="index.html"class="logo-titulo">Cafe del Valle</a>
+            </div>
+            <button type="button" class="btn-menu-movil" id="btn-menu-movil">Menu</button>
+            <nav aria-label="Menu principal">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html" class="">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul><ul>
+            </nav>
+        </div>/
+        <div class="nav-right">
+            <a href="login.html" class="btn-nav-login">Iniciar sesion</a>
+            <a href="registro.html" class="btn-nav-registro">registrarse</a>
+            <a href="productos.html#seccion-carrito" class="btn-nav-cart">Carrito(<span id="cart-count">0</span>)</a>
+        </div>
+     </header>
+
+     <main>
+        <section>
+            <h1 class="titulo-pagina">Catalogo de Productos</h1>
+            <div id="grid-productos" class="grid-tarjetas"></div>
+        </section>
+
+        <section id="seccion-carrito">
+            <h2 class="titulo-pagina">Carrito de Compras</h2>
+            <div id="carrito-vacio-msg" class="caja-blanca oculto">
+                 <p>Carrito vacio.</p>
+            </div>
+            <div id="carrito-contenido">
+                </div class="contenedor-tabla">
+                      <table class="tabla-general">
+                         <thead>
+                             <tr>
+                                <th>Productos</th>
+                                <th>Precios</th>
+                                <th>Cantidad</th>
+                                <th>Subtotal</th>
+                                <th>Accion</th>
+                             </tr>
+                         </thead>  
+                         <tbody id="tabla-carrito-body"></tbody>
+                     </table> 
+                </div>
+                <div class="carrito-resumen">
+                    </div> 
+                         <button type=" button" class="btn btn-peligro"onclick="vaciarCarrito()">Vaciar</button>
+                    </div>
+                    <div>
+                                       <p>Total: <span id="cart-total" class="total-destacado">$0</span></p>
+                        <button type="button" class="btn" onclick="finalizarCompra()">Finalizar compra</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer><p>2026 Cafe del Valle</p></footer>
+    <script src="js/data.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
