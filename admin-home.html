@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=" width=device-width, inicial-scale=1.0">
+    <title>Admin - Inicio </title>>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <a> href="admin-home.html" class="logo-titulo> Cafe del Valle Admin</a>
+        </div>
+        <div class="nav-right">
+            <a href="index.html" class="btn-nav-registro">Volver a tienda </a>
+        </div>
+    </header>
+
+    <div class="admin-contenedor">
+        <aside class="admin-sidebar">
+            <h2 class="titulo-pagina">Menu</h2>
+            <nav aria-label="Menu administracion">
+            <ul>
+                <li><a href="admin-home.html" class="activo">Inicio Admin</a></li>
+                <li><a href="admin-productos.html">Productos</a></li>
+                <li><a href="admin-nuevo-producto.html">Nuevo Producto</a></li>
+                <li><a href="admin-usuarios.html">Usuarios</a></li>
+                <li><a href="admin-nuevo-usuario.html">Nuevo Usuario</a></li>
+            </ul>
+            </nav>
+        </aside>
+        <main class="admin-contenido">
+            <h1>Panel Adminstrativo</h1>
+            <div class="tarjetas-stats">
+                <div class="card-stat"><h4>Productos</h4><p id="stat-productos">0</p></div>
+                <div class="card-stat"><h4>Stock Critico</h4><p id="stat-criticos">0</p></div>
+                <div class="card-stat"><h4>Usuarios</h4><p id="stat-usuarios">0</p></div>
+            </div>
+        </main>
+    </div>
+    <footer><p>Admin Cafe del Valle</p></footer>
+    <script src="js/data.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+    
