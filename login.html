@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe del Valle - Iniciar sesion</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo-area">
+                <img src="img/pexels-gareth-rees-2793957-4353927.jpg" alt="Logo Cafe del Valle" class="logo-img">
+                <a href="index.html" class="logo-titulo">Cafe del Valle</a>
+            </div>
+            <button type="button" class="btn-menu-movil" id="btn-menu-movil">Menu</button>
+            <nav aria-label="Menu principal">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="nav-right">
+            <a href="login.html" class="btn-nav-login">Iniciar sesion</a>
+            <a href="registro.html" class="btn-nav-registro">Registrarse</a>
+            <a href="productos.html#seccion-carrito" class="btn-nav-cart">Carrito (<span id="cart-count">0</span>)</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="formulario-contenedor">
+            <div class="login-marca">
+                <img src="img/pexels-gareth-rees-2793957-4353927.jpg" alt="Logo empresa">
+                <h2>Cafe del Valle</h2>
+                <p>Ingreso de usuarios</p>
+            </div>
+
+            <form id="form-login" novalidate>
+                <div class="campo-grupo">
+                    <label for="login-correo">Correo (*)</label>
+                    <input type="email" id="login-correo" maxlength="100">
+                    <span id="error-login-correo" class="error-msg"></span>
+                </div>
+                <div class="campo-grupo">
+                    <label for="login-password">Contrasena (*)</label>
+                    <input type="password" id="login-password">
+                    <span id="error-login-password" class="error-msg"></span>
+                </div>
+                <button type="submit" class="btn" style="width:100%;">Ingresar</button>
+            </form>
+
+            <div class="demo-caja">
+                <p>Demo presentacion:</p>
+                <button type="button" class="btn btn-secundario" onclick="rellenarDemo('admin')">Admin</button>
+                <button type="button" class="btn btn-secundario" onclick="rellenarDemo('vendedor')">Vendedor</button>
+                <button type="button" class="btn btn-secundario" onclick="rellenarDemo('cliente')">Cliente</button>
+                <p>Admin: admin@duoc.cl / admin1 | Vendedor: vendedor@duoc.cl / vend1 | Cliente: cliente@gmail.com / cli1</p>
+            </div>
+
+            <p style="text-align:center;margin-top:15px;"><a href="registro.html">Crear cuenta</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>2026 Cafe del Valle</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
