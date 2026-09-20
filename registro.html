@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe del Valle - Registro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo-area">
+                <img src="img/pexels-gareth-rees-2793957-4353927.jpg" alt="Logo Cafe del Valle" class="logo-img">
+                <a href="index.html" class="logo-titulo">Cafe del Valle</a>
+            </div>
+            <button type="button" class="btn-menu-movil" id="btn-menu-movil">Menu</button>
+            <nav aria-label="Menu principal">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="nav-right">
+            <a href="login.html" class="btn-nav-login">Iniciar sesion</a>
+            <a href="registro.html" class="btn-nav-registro">Registrarse</a>
+            <a href="productos.html#seccion-carrito" class="btn-nav-cart">Carrito (<span id="cart-count">0</span>)</a>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="titulo-pagina">Registro de usuario</h1>
+        <div class="formulario-contenedor formulario-registro">
+            <form id="form-registro" novalidate>
+                <div class="campo-grupo">
+                    <label for="reg-run">RUN (*)</label>
+                    <input type="text" id="reg-run" maxlength="9" placeholder="19011022K">
+                    <span id="error-reg-run" class="error-msg"></span>
+                </div>
+                <div class="campo-grupo">
+                    <label for="reg-nombre">Nombre (*)</label>
+                    <input type="text" id="reg-nombre" maxlength="50">
+                    <span id="error-reg-nombre" class="error-msg"></span>
+                </div>
+                <div class="campo-grupo">
+                    <label for="reg-apellidos">Apellidos (*)</label>
+                    <input type="text" id="reg-apellidos" maxlength="100">
+                    <span id="error-reg-apellidos" class="error-msg"></span>
+                </div>
+                <div class="campo-grupo">
+                    <label for="reg-correo">Correo (*)</label>
+                    <input type="email" id="reg-correo" maxlength="100">
+                    <span id="error-reg-correo" class="error-msg"></span>
+                </div>
+                <div class="campo-grupo">
+                    <label for="reg-password">Contrasena (*)</label>
+                    <input type="password" id="reg-password">
+                    <span id="error-reg-password" class="error-msg"></span>
+                </div>
+                <div class="campo-grupo">
+                    <label for="reg-fecha">Fecha nacimiento (opcional)</label>
+                    <input type="date" id="reg-fecha">
+                </div>
+                <div class="campo-grupo">
+                    <label for="select-region">Region (*)</label>
+                    <select id="select-region"><option value="">-- Seleccione --</option></select>
+                    <span id="error-select-region" class="error-msg"></span>
+                </div>
+                <div class="campo-grupo">
+                    <label for="select-comuna">Comuna (*)</label>
+                    <select id="select-comuna" disabled><option value="">-- Seleccione --</option></select>
+                    <span id="error-select-comuna" class="error-msg"></span>
+                </div>
+                <div class="campo-grupo">
+                    <label for="reg-direccion">Direccion (*)</label>
+                    <input type="text" id="reg-direccion" maxlength="300">
+                    <span id="error-reg-direccion" class="error-msg"></span>
+                </div>
+                <button type="submit" class="btn" style="width:100%;">Registrarse</button>
+            </form>
+        </div>
+    </main>
+
+    <footer><p>2026 Cafe del Valle</p></footer>
+    <script src="js/data.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
