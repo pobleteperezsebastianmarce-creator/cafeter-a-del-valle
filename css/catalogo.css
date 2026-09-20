@@ -147,6 +147,45 @@
 
     }
 
+    .grid-contacto{
+        align-items: start;
+    }
+
+    .seccion-form-contacto{
+        margin-bottom: 1.5rem;
+    }
+
+    .campo-label{
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.3rem;
+    }
+
+    .campo-input,
+    .campo-textarea{
+        width: 100%;
+        padding: 0.6rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+
+    }
+
+    .campo-textarea{
+        resize: vertical;
+
+    }
+
+    .btn-contacto-submit{
+        width: 100%;
+    }
+
+    .lista-contacto-info{
+        list-style: none;
+        padding: 0;
+        line-height: 2;
+    }
+
 
 
 }
