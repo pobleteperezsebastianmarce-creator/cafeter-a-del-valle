@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale">
+    <title> Admin - Productos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left"><a href="admin-home.html" class="logo-titulo">Cafe del Valle Admin</a></div>
+        <div class="nav-right"><a href="index.html" class="btn-nav-registro">Volver a la tienda</a></div>
+    </header>
+    <div class="admin-contenedor">
+        <aside class="admin-sidebar">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="admin-home.html">Inicio Admin</a></li>
+                <li><a href="admin-productos.html" class="activo">Productos</a></li>
+                <li><a href="admin-nuevo-producto.html">Nuevo Producto</a></li>
+                <li><a href="admin-usuarios.html">Usuarios</a></li>
+                <li><a href="admin-nuevo-usuario.html">Nuevo Usuario</a></li>
+            </ul>
+        </aside>
+        <main class="admin-contenido">
+            <h1>Listado de productos</h1>
+            <a href="admin-nuevo-producto.html" class="btn" id="btn-nuevo-producto-admin">Nuevo Producto</a>
+            <div class="contenedor-tabla">
+                <table class="tabla-general">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Codigo</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Categoria</th>
+                            <th>Accion</th>
+                        </tr>
+                        <tbody id="admin-tabla-productos"></tbody>
+                    </thead>
+                </table>
+            </div>
+
+            <!-- Ordenes para rol Vendedor (sin paginas extra) -->
+            <section>
+                <h2>Ordenes de Compra</h2>
+                <div class="contenedor-tabla">
+                    <table class="tabla-general">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Cliente</th>
+                                <th>Fecha</th>
+                                <th>Total</th>
+                                <th>Estado</th>
+                                <th>Accion</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-tabla-ordenes"></tbody>
+                    </table>
+                </div>
+                <div id="detalle-orden-inline" class="caja-blanca" style="margin-top:15px;display:none;"></div>
+            </section>
+        </main>
+    </div>
+    <footer><p>Admin Cafe del Valle</p></footer>
+    <script src="js/data.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
