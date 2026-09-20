@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Editar usuario</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-left"><a href="admin-home.html" class="logo-titulo">Cafe del Valle Admin</a></div>
+        <div class="nav-right"><a href="index.html" class="btn-nav-registro">Volver a tienda</a></div>
+    </header>
+
+    <div class="admin-contenedor">
+        <aside class="admin-sidebar">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="admin-usuarios.html" class="activo">Usuarios</a></li>
+                <li><a href="admin-nuevo-usuario.html">Nuevo usuario</a></li>
+            </ul>
+        </aside>
+        <main class="admin-contenido">
+            <h1>Editar usuario</h1>
+            <form id="form-editar-usuario" class="formulario-contenedor formulario-ancho-admin" novalidate>
+                <div class="campo-grupo"><label for="user-run">RUN (*)</label><input type="text" id="user-run" maxlength="9"><span id="error-user-run" class="error-msg"></span></div>
+                <div class="campo-grupo"><label for="user-nombre">Nombre (*)</label><input type="text" id="user-nombre" maxlength="50"><span id="error-user-nombre" class="error-msg"></span></div>
+                <div class="campo-grupo"><label for="user-apellidos">Apellidos (*)</label><input type="text" id="user-apellidos" maxlength="100"><span id="error-user-apellidos" class="error-msg"></span></div>
+                <div class="campo-grupo"><label for="user-correo">Correo (*)</label><input type="email" id="user-correo" maxlength="100"><span id="error-user-correo" class="error-msg"></span></div>
+                <div class="campo-grupo"><label for="user-password">Contrasena (opcional al editar)</label><input type="password" id="user-password"><span id="error-user-password" class="error-msg"></span></div>
+                <div class="campo-grupo"><label for="user-fecha">Fecha nacimiento (opcional)</label><input type="date" id="user-fecha"></div>
+                <div class="campo-grupo">
+                    <label for="user-rol">Tipo usuario (*)</label>
+                    <select id="user-rol">
+                        <option value="">-- Seleccione --</option>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Vendedor">Vendedor</option>
+                        <option value="Cliente">Cliente</option>
+                    </select>
+                    <span id="error-user-rol" class="error-msg"></span>
+                </div>
+                <div class="campo-grupo"><label for="select-region">Region (*)</label><select id="select-region"><option value="">-- Seleccione --</option></select><span id="error-select-region" class="error-msg"></span></div>
+                <div class="campo-grupo"><label for="select-comuna">Comuna (*)</label><select id="select-comuna" disabled><option value="">-- Seleccione --</option></select><span id="error-select-comuna" class="error-msg"></span></div>
+                <div class="campo-grupo"><label for="user-direccion">Direccion (*)</label><input type="text" id="user-direccion" maxlength="300"><span id="error-user-direccion" class="error-msg"></span></div>
+                <button type="submit" class="btn">Actualizar usuario</button>
+            </form>
+        </main>
+    </div>
+
+    <footer><p>Admin Cafe del Valle</p></footer>
+    <script src="js/data.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

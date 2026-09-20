@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Usuarios</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-left"><a href="admin-home.html" class="logo-titulo">Cafe del Valle Admin</a></div>
+        <div class="nav-right"><a href="index.html" class="btn-nav-registro">Volver a tienda</a></div>
+    </header>
+
+    <div class="admin-contenedor">
+        <aside class="admin-sidebar">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="admin-home.html">Inicio admin</a></li>
+                <li><a href="admin-productos.html">Productos</a></li>
+                <li><a href="admin-usuarios.html" class="activo">Usuarios</a></li>
+                <li><a href="admin-nuevo-usuario.html">Nuevo usuario</a></li>
+            </ul>
+        </aside>
+        <main class="admin-contenido">
+            <h1>Listado de usuarios</h1>
+            <a href="admin-nuevo-usuario.html" class="btn">Nuevo usuario</a>
+            <div class="contenedor-tabla">
+                <table class="tabla-general">
+                    <thead>
+                        <tr>
+                            <th>RUN</th>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Rol</th>
+                            <th>Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-tabla-usuarios"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <footer><p>Admin Cafe del Valle</p></footer>
+    <script src="js/data.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
