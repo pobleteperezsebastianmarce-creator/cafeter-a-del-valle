@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+</head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Cafe del Valle - Contacto</title>
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/catalogo.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo-area">
+                <img src="img/pexels-gareth-rees-2793957-4353927.jpg" alt="Logo Cafe del Valle" class="logo-img">
+                <a href="index.html" class="logo-titulo">Cafe del Valle</a>
+            </div>
+            <button type="button"  class="btn-menu-movil" id="btn-menu-movil">Menu</button>
+            <nav aria-label="Menu principal">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blogs.html">blogs</a></li>
+                    <li><a href="contacto.html" class="activo">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="nav-right">
+             <a href="login.html" class="btn-nav-login">Iniciar sesion</a>
+             <a href="registro.html" class="btn-nav-registro">Registrarse</a>
+             <a href="productos.html#seccion-carrito" class="btn-nav-cart">Carrito (<span id="cart-count">0</span>)</a>
+        </div>
+    </header>
+    
+    
+    <main class="contenedor-inicio-960">
+        <h1 class="titulo-pagina">Ponte en contacto con Nosotros</h1>
+        
+        <div class="grid-tarjetas"  style=" align-items:start;">
+
+            <section class="caja-blanca">
+                <h2>Envianos tu consulta</h2>
+                <p style="margin-bottom: 1.5rem;">¿Tienes dudas sobre nuestros origenes,granos o envios? Escribenos.</p>
+
+                <form id="form-contacto" action="#" method="POST">
+                    <div style="margin-bottom: 1rem;">
+                        <label for="nombre-contacto" style="display: block; font-weight: bold; margin-bottom: 0.3rem;">Nombrte completo</label>
+                        <input type="text" id="nombre-contacto" name="nombre" required placeholder="Tu nombre" style="width: 100%; padding: 0.6rem; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+
+                    <div style="margin-bottom: 1rem;">
+                        <label for="motivo-contacto" style="display: block; font-weight: bold; margin-bottom: 0.3rem;">Motivo:</label>
+
+                    </div>
+
+                    <div style="margin-bottom: 1rem;">
+                        <label for="email-contacto style=display: block; font-weight: bold; margin-bottom: 0.3rem;">Correo electronico</label>
+                        <input type="email" id="email-contacto name=email" required placeholder="nombre@correo.com" style="width: 100%; padding: 0.6rem; border-radius: 4px;">
+
+                    </div>
+
+                    <div style="margin-bottom: 1.2rem;">
+                        <label for="mensaje-contacto" style="display: block; font-weight: bold; margin-bottom: 0.3rem;">Mensaje:</label>
+                        <textarea id="mensaje-contacto" name="mensaje" rows="5" required placeholder="Escribe tu consulta aquí..." style="width: 100%; padding: 0.6rem; border: 1px solid #ccc; border-radius: 4px; resize: vertical;"></textarea>
+                    </div> 
+
+                    <button type="submit" class="btn" style="width: 100%">Enviar mensaje</button>
+                </form>
+            </section>
+
+            <aside class="caja-blanca">
+                <h2>Casa Matriz</h2>
+                <p style="margin-bottom: 1.5rem;"> Visitanos en nuestsr tostaduria y sala de degustacion</p>
+                <ul style="list-style:  none;padding: 0; line-height: 2;">
+                    <li><strong>📍 Dirección:</strong> Av. Providencia 1234, Santiago, Chile</li>
+                    <li><strong>⏰ Horario:</strong> Lunes a Sábado, 08:00 - 20:00 hrs</li>
+                    <li><strong>📞 Teléfono:</strong> +56 9 1234 5678</li>
+                    <li><strong>✉️ Correo:</strong> contacto@cafedelvalle.cl</li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+
+<footer>       
+        <p>&copy; 2026 Cafe del Valle -Todos los derechos reservados.</p>
+        <p>Contacto: contacto@cafedelvalle.cl</p>
+    </footer>
+
+    <script src="js/catalogo.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
