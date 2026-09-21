@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Cafe del Valle - Detalle producto</title>
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/catalogo.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo-area">
+                <img src="img/pexels-gareth-rees-2793957-4353927.jpg" alt="Logo Cafe del Valle" class="logo-img">
+                <a href="index.html" class="logo-titulo">Cafe del Valle</a>
+            </div>
+            <button type="button"  class="btn-menu-movil" id="btn-menu-movil">Menu</button>
+            <nav aria-label="Menu principal">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html" class="activo">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="nav-right">
+             <a href="login.html" class="btn-nav-login">Iniciar sesion</a>
+             <a href="registro.html" class="btn-nav-registro">Registrarse</a>
+             <a href="productos.html#seccion-carrito" class="btn-nav-cart">Carrito (<span id="cart-count">0</span>)</a>
+        </div>
+    </header>
+    
+    
+    <main>
+        <div id="vista-detalle-producto" class="detalle-contenedor"></div>
+      
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cafe del Valle -Todos los derechos reservados.</p>
+        <p>Contacto: contacto@cafedelvalle.cl</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/catalogo.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+            
