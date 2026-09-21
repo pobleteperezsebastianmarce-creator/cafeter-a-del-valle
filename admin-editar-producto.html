@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Editar producto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin-prod.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left"><a href="admin-home.html" class="logo-titulo">Cafe del Valle Admin</a></div>
+        <div class="nav-right"><a href="index.html" class="btn-nav-registro">Volver a tienda</a></div>
+    </header>
+    <div class="admin-contenedor">
+        <aside class="admin-sidebar">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="admin-productos.html" class="activo">Productos</a></li>
+                <li><a href="admin-nuevo-producto.html">Nuevo producto</a></li>
+            </ul>
+        </aside>
+        <main class="admin-contenido">
+            <h1>Editar Producto</h1>
+            <form id="form-editar-producto" class="formulario-contenedor formulario-ancho-admin" novalidate>
+                <div class="campo-grupo"><label for="prod-codigo">Codigo (*)</label><input type="text" id="prod-codigo"><span id="error-prod-codigo" class="error-msg"></span></div>
+                <div class="campo-grupo"><label for="prod-nombre">Nombre (*)</label><input type="text" id="prod-nombre" maxlength="100"><span id="error-prod-nombre" class="error-msg"></span></div>
+                <div class="campo-grupo"><label for="prod-descripcion">Descripcion</label><textarea id="prod-descripcion" rows="3" maxlength="500"></textarea><span id="error-prod-descripcion" class="error-msg"></span></div>
+                <div class="campo-grupo"><label for="prod-precio">Precio (*)</label><input type="number" id="prod-precio" min="0" step="0.01"><span id="error-prod-precio" class="error-msg"></span></div>
+                <div class="campo-grupo"><label for="prod-stock">Stock (*)</label><input type="number" id="prod-stock" min="0" step="1"><span id="error-prod-stock" class="error-msg"></span></div>
+                <div class="campo-grupo"><label for="prod-stock-critico">Stock critico</label><input type="number" id="prod-stock-critico" min="0" step="1"><span id="error-prod-stock-critico" class="error-msg"></span></div>
+                <div class="campo-grupo">
+                    <label for="prod-categoria">Categoria (*)</label>
+                    <select id="prod-categoria">
+                        <option value="">-- Seleccione --</option>
+                        <option value="Cafes Espreso">Cafes Espreso</option>
+                        <option value="Cafes con Leche">Cafes con Leche</option>
+                        <option value="Cafes Especiales">Cafes Especiales</option>
+                        <option value="Pasteleria">Pasteleria</option>
+                    </select>
+                    <span id="error-prod-categoria" class="error-msg"></span>
+                </div>
+                <div class="campo-grupo"><label for="prod-imagen">Imagen (opcional)</label><input type="text" id="prod-imagen"></div>
+                <div id="alerta-stock-critico" class="alerta-stock"></div>
+                <button type="submit" class="btn">Actualizar</button>
+            </form>
+
+        </main>
+    </div>
+    <footer><p>Admin Cafe del Valle</p></footer>
+    <script src="js/data.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
