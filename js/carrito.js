@@ -170,3 +170,53 @@ function renderizarTablaCarrito() {
         vacio.classList.add("oculto");
     }
 }
+var html = "";
+    for (var i = 0; i < carrito.length; i++) {
+        var item = carrito[i];
+        var sub = item.precio * item.cantidad;
+        html += "<tr>";
+        html += "<td><img src='" + item.imagen + "' width='45' height='45' alt=''> " + item.nombre + "</td>";
+        html += "<td>$" + item.precio.toLocaleString("es-CL") + "</td>";
+        html += "<td><button type='button' class='btn btn-secundario' onclick='cambiarCantidad(" + item.id + ",-1)'>-</button> " + item.cantidad + " <button type='button' class='btn btn-secundario' onclick='cambiarCantidad(" + item.id + ",1)'>+</button></td>";
+        html += "<td>$" + sub.toLocaleString("es-CL") + "</td>";
+        html += "<td><button type='button' class='btn btn-peligro' onclick='eliminarDelCarrito(" + item.id + ")'>Quitar</button></td>";
+        html += "</tr>";
+    }
+    body.innerHTML = html;
+    actualizarTotal();
+    actualizarContador();
+}
+
+function finalizarCompra() {
+    var carrito = obtenerCarrito();
+    if (carrito.length === 0) {
+        alert("El carrito esta vacio.");
+        return;
+    }
+    var total = actualizarTotal();
+    var detalle = "";
+    for (var i = 0; i < carrito.length; i++) {
+        detalle = detalle + carrito[i].nombre + " x" + carrito[i].cantidad + "; ";
+    }
+    var nuevoId = ordenesData.length > 0 ? ordenesData[ordenesData.length - 1].id + 1 : 101;
+    ordenesData.push({
+        id: nuevoId,
+        cliente: "Cliente Web",
+        fecha: "2026-09-12",
+        total: total,
+        estado: "Pendiente",
+        detalle: detalle
+    });
+    guardarOrdenes();
+    guardarCarrito([]);
+    alert("Compra registrada. Gracias.");
+    renderizarTablaCarrito();
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    renderizarTablaCarrito();
+    actualizarContador();
+    actualizarTotal();
+});
+
+
