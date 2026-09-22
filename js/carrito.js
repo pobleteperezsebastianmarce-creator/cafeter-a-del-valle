@@ -185,7 +185,7 @@ var html = "";
     body.innerHTML = html;
     actualizarTotal();
     actualizarContador();
-}
+
 
 function finalizarCompra() {
     var carrito = obtenerCarrito();
