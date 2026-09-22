@@ -105,3 +105,68 @@ function cambiarCantidad(idProducto, delta){
     guardarCarrito(carrito);
     renderizarTablaCarrito();
 }
+
+function vaciarCarrito() {
+    if (confirm("Desea vaciar el carrito?")) {
+        guardarCarrito([]);
+        renderizarTablaCarrito();
+    }
+}
+
+function actualizarContador() {
+    var contador = document.getElementById("cart-count");
+    if (!contador) {
+        return;
+    }
+    var carrito = obtenerCarrito();
+    var total = 0;
+    for (var i = 0; i < carrito.length; i++) {
+        total = total + carrito[i].cantidad;
+    }
+    contador.textContent = total;
+}
+
+function actualizarTotal() {
+    var totalElem = document.getElementById("cart-total");
+    if (!totalElem) {
+        return 0;
+    }
+    var carrito = obtenerCarrito();
+    var suma = 0;
+    for (var i = 0; i < carrito.length; i++) {
+        suma = suma + (carrito[i].precio * carrito[i].cantidad);
+    }
+    totalElem.textContent = "$" + suma.toLocaleString("es-CL");
+    return suma;
+}
+
+function renderizarTablaCarrito() {
+    var body = document.getElementById("tabla-carrito-body");
+    var vacio = document.getElementById("carrito-vacio-msg");
+    var contenido = document.getElementById("carrito-contenido");
+    if (!body) {
+        return;
+    }
+
+    var carrito = obtenerCarrito();
+    if (carrito.length === 0) {
+        if (contenido) {
+            contenido.style.display = "none";
+        }
+        if (vacio) {
+            vacio.style.display = "block";
+            vacio.classList.remove("oculto");
+        }
+        actualizarTotal();
+        actualizarContador();
+        return;
+    }
+
+    if (contenido) {
+        contenido.style.display = "block";
+    }
+    if (vacio) {
+        vacio.style.display = "none";
+        vacio.classList.add("oculto");
+    }
+}
